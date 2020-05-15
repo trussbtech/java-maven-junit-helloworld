@@ -71,7 +71,7 @@
 			  <manifest>
 				<addClasspath>true</addClasspath>
 				<classpathPrefix>lib/</classpathPrefix>
-				<mainClass>com.example.javamavenjunithelloworld</mainClass>
+				<mainClass>com.example.java-maven-junit-helloworld</mainClass>
 			  </manifest>
 			</archive>
 			</configuration>
