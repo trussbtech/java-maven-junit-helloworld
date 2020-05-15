@@ -61,19 +61,27 @@
   <build>
     <plugins>
 
+		<plugin>
+			<!-- Build an executable JAR -->
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>3.8.0</version>
+			<configuration>
+				<archive>
+				  <manifest>
+					<addClasspath>true</addClasspath>
+					<mainClass>com.example.javamavenjunithelloworld</mainClass>
+				  </manifest>
+				</archive>
+			</configuration>
+		</plugin>
+
       <plugin>
         <!-- Configures the compiler. -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
-        <configuration>
-		    <archive>
-				<manifestFile>src/main/res/META-INF/MANIFEST.MF </manifestFile>
-				<index>true</index>
-					<manifest>
-						<addClasspath>true</addClasspath>
-					</manifest>
-			</archive>		
+        <configuration>		
 			<compilerArgs>
 				<arg>-Xlint</arg>
 			</compilerArgs>
