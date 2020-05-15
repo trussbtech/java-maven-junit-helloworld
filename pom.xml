@@ -67,9 +67,16 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
-          <compilerArgs>
-            <arg>-Xlint</arg>
-          </compilerArgs>
+		    <archive>
+				<manifestFile>src/main/res/META-INF/MANIFEST.MF </manifestFile>
+				<index>true</index>
+					<manifest>
+						<addClasspath>true</addClasspath>
+					</manifest>
+			</archive>		
+			<compilerArgs>
+				<arg>-Xlint</arg>
+			</compilerArgs>
         </configuration>
       </plugin>
 
